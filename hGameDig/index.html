@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>挖矿秘籍</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="css/downloading.css" />
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        /*设置画布布满屏幕*/
+
+        #demo {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/wabg.png" class="do-bg">
+
+    <div id="demo">
+        <!-- <canvas id="canvas" width="780" height="800">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas> -->
+    </div>
+
+
+    <div class="gun-text">
+        <div id="scrollDiv" class="scrollDiv">
+            <ul class="scroll-ul">
+                <li>是发动机挖了120个钻石</li>
+                <li>是发动机挖了120个钻石</li>
+                <li>是发动机挖了120个钻石</li>
+            </ul>
+        </div>
+    </div>
+    <!--文字滚动结束-->
+
+    <a href="#" class="get-phy">
+        <img src="images/ti-img.png">
+    </a>
+    <!--钻石值和体力值-->
+    <div class="number-zhi">
+        <p class="number-title">我的钻石</p>
+        <div class="zuan-bg">13290</div>
+        <p class="number-title">我的体力</p>
+        <div class="ti-bg">30</div>
+    </div>
+    <!--number-zhi-->
+    <!--底部-->
+    <div class="phy-bottom">
+        <img src="images/bobutbg.png" class="bottom-img">
+        <a href="#" class="secre">挖矿秘籍</a>
+        <a href="#" class="zuan-uers">钻石用途</a>
+        <span class="pai pai-but">
+            <img src="images/but-center.png" class="pai-img">
+            <span class="pai-bg">排行榜</span>
+        </span>
+    </div>
+    <!--phy-bottom-->
+    <!--底部-->
+    <!--排行榜弹框-->
+    <div class="box-can pai-message">
+        <div class="pai-box">
+            <div style="position:relative">
+                <img src="images/white-bg.png" class="pai-white-img">
+                <span class="pai">
+                    <img src="images/but-center1.png" class="pai-img">
+                    <span class="pai-bg">排行榜</span>
+                </span>
+            </div>
+            <div class="div-text">
+                <h5 class="hour-title">排行榜每一小时更新一次</h5>
+                <div class="frist-li">
+                    <span class="ranking">名次</span>
+                    <span style="padding-left:18px">用户名</span>
+                    <span class="price">钻石</span>
+                </div>
+                <ul class="pai-ul">
+
+                    <li>
+                        <span class="ranking">
+                            <img src="images/jin.png">
+                        </span>
+                        <span>韩春</span>
+                        <span class="price">10987</span>
+                    </li>
+                    <li>
+                        <span class="ranking">
+                            <img src="images/yin.png">
+                        </span>
+                        <span>斯维尔</span>
+                        <span class="price">987</span>
+                    </li>
+                    <li>
+                        <span class="ranking">
+                            <img src="images/ji.png">
+                        </span>
+                        <span>斯维的书法尔</span>
+                        <span class="price">10987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">4</span>
+                        <span>斯维尔</span>
+                        <span class="price">987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">5</span>
+                        <span>斯维的书法尔</span>
+                        <span class="price">10987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">4</span>
+                        <span>斯维尔</span>
+                        <span class="price">987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">5</span>
+                        <span>斯维的书法尔</span>
+                        <span class="price">10987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">4</span>
+                        <span>斯维尔</span>
+                        <span class="price">987</span>
+                    </li>
+                    <li>
+                        <span class="text-four">5</span>
+                        <span>斯维的书法尔</span>
+                        <span class="price">10987</span>
+                    </li>
+                </ul>
+            </div>
+            <img src="images/close.png" class="close">
+        </div>
+        <!--pai-box-->
+    </div>
+    <!--box-can-->
+    <!--排行榜弹框结束-->
+
+
+    <!--体力不足榜弹框-->
+    <div class="box-can no-phy-box" style="display:none">
+        <div class="pai-box no-phy">
+            <div style="position:relative">
+                <img src="images/white-bg1.png" class="pai-white-img">
+                <span class="pai">
+                    <img src="images/but-center1.png" class="pai-img " style="width:66%">
+                    <span class="tishi-bg">提示</span>
+                </span>
+            </div>
+            <div class="div-text">
+                <h4 class="no-title">您的体力不足啦～</h4>
+                <p class="place">请获取体力后继续！</p>
+                <a href="#" class="fast-get">立即获取</a>
+            </div>
+            <img src="images/close.png" class="close">
+        </div>
+        <!--pai-box-->
+    </div>
+    <!--box-can-->
+    <!--体力不足弹框结束-->
+    <!-- <div style="background-color: rgba(0,0,0,1);display: inline-block;font-size:0;" id="demo"></div>-->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jqeury3.3.1.js"></script>
+    <script src="js/hGameDig.js"></script>
+    <script>
+
+        $(function () {
+            var items = [{
+                data: {},
+                isRandom: true,
+                text: '+20',
+                type: 'zs'
+            }, {
+                data: {},
+                isRandom: true,
+                text: '+20',
+                type: 'zs'
+            }, {
+                data: {},
+                isRandom: true,
+                text: '+20',
+                type: 'zs'
+            }, {
+                data: {},
+                isRandom: true,
+                text: '+20',
+                type: 'zs'
+            }, {
+                data: {},
+                isRandom: true,
+                text: '+20',
+                type: 'zs'
+            },]
+            $('#demo').hGameDig({
+                data: items,
+                shouldClick: function () {
+                    //返回true zz下降
+                    //返回false zz不下降
+                    return true;
+                },
+                loadedCallBack: function () {
+                    console.log('image loaded');
+                },
+                dragEnd: function (index) {
+                    console.log(items[index]);
+                    console.log(items[index].type);
+                    console.log(items[index].text);
+                    // num=index.text;
+                    //                   
+                    //                         alert(num)
+
+                    //  console.log('第'+index+'被抓起');
+
+                }
+            });
+        });
+        //文字滚动
+        function AutoScroll(obj) {
+            $(obj).find(".scroll-ul:first").animate({
+                marginTop: "-25px"
+            }, 500, function () {
+                $(this).css({
+                    marginTop: "0px"
+                }).find("li:first").appendTo(this);
+            });
+        }
+        $(document).ready(function () {
+            setInterval('AutoScroll("#scrollDiv")', 2000);
+        });
+        //点击排行榜弹框弹出
+        $(function () {
+            $('.pai-but').click(function () {
+                $('.pai-message').show()
+            })
+            $('.close').click(function () {
+                $('.pai-message').hide()
+            })
+        })
+    </script>
+</body>
+
+</html>
