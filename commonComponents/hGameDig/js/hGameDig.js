@@ -283,7 +283,7 @@
 
         }
         function gzStretch() {
-            lh += 5;
+            lh += 5 * allSize.ratio;
             ctx.clearRect(0, 0, allSize.cWidth, allSize.cHeight);
             drawLine();
             drawZZ();
@@ -321,7 +321,7 @@
             }
         }
         function lineBack() {
-            lh -= 5;
+            lh -= 5 * allSize.ratio;
             ctx.clearRect(0, 0, allSize.cWidth, allSize.cHeight);
             drawLine();
             drawZZ();
