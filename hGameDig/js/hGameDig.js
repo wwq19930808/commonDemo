@@ -132,9 +132,9 @@
                 n = cWidth / 7.8 * ratio;
             return {
                 ratio: ratio,
-                cWidth: cWidth * ratio,
-                cHeight: el.height() * ratio,
-                middleX: cWidth / 2 * ratio,
+                cWidth: cWidth ,
+                cHeight: el.height(),
+                middleX: cWidth / 2,
                 lw: 0.1 * n,//10px
                 lh: 1.55 * n,//155px
                 zzw: 1.7 * n,
@@ -242,7 +242,6 @@
                     ctx.restore();
                     if (!!item.text && !!textCanvas[i]) {
                         ctx.drawImage(textCanvas[i], px - allSize.textWidth / 2, py - allSize.textMargin, allSize.textWidth, allSize.textHeight);
-                        //   ctx.fillText(item.text, px, py - (allSize.zsmd) / 2);
                     }
                     continue;
                 }
@@ -263,7 +262,6 @@
                 ctx.restore();
                 if (!!item.text && !!textCanvas[i]) {
                     ctx.drawImage(textCanvas[i], item.x - allSize.textWidth / 2, item.y - allSize.textMargin, allSize.textWidth, allSize.textHeight);
-                    //  ctx.drawText(item.text, px, py - (allSize.zsmd) / 2);
                 }
             }
             if (hasZs) {
@@ -343,13 +341,6 @@
         }
         function addEvents() {
             el.on('click', function () {
-                //var numbers=$('.ti-bg').text()
-
-
-                // 
-                //				if(numbers<0){
-                //					   $('.no-phy-box').show()
-                //					}
                 if (opts.shouldClick()) {
                     if (!!timer1) {
                         cancelAnimationFrame(timer1);
@@ -361,7 +352,6 @@
                 }
             });
         }
-
         function getRatio() {
             var ctx = $('<canvas>')[0].getContext('2d');
 
