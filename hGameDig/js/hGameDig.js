@@ -132,7 +132,7 @@
                 n = cWidth / 7.8 * ratio;
             return {
                 ratio: ratio,
-                cWidth: cWidth ,
+                cWidth: cWidth,
                 cHeight: el.height(),
                 middleX: cWidth / 2,
                 lw: 0.1 * n,//10px
@@ -341,14 +341,10 @@
         }
         function addEvents() {
             el.on('click', function () {
-                if (opts.shouldClick()) {
-                    if (!!timer1) {
-                        cancelAnimationFrame(timer1);
-                        timer1 = null;
-                        if (!timer2) {
-                            gzStretch();
-                        }
-                    }
+                if (!!timer1 && !timer2 && opts.shouldClick()) {
+                    cancelAnimationFrame(timer1);
+                    timer1 = null;
+                    gzStretch();
                 }
             });
         }
