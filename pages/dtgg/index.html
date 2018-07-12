@@ -11,7 +11,7 @@
         (function () {
             setDocfontSize();
             if (window.attchEvent) {
-                window.attchEvent('resize', function () {
+                window.attchEvent('onresize', function () {
                     setDocfontSize();
                 })
             } else {
