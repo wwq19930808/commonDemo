@@ -1,0 +1,142 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+html {font-family:'Microsoft YaHei';font-size:16px;}
+/* @media only screen and (min-width:320px){html{font-size:17.777778px !important;}}
+@media only screen and (min-width:360px){html{font-size:20px !important;}}
+@media only screen and (min-width:375px){html{font-size:20.833333px !important;}}
+@media only screen and (min-width:414px){html{font-size:23px !important;}}
+@media only screen and (min-width:480px){html{font-size:26.666667px !important;}}
+@media only screen and (min-width:640px){html{font-size:35.555556px !important;}}
+@media only screen and (min-width:720px){html{font-size:40px !important;}} */
+
+
+
+
+html,body{height:100%;}
+input{border:none}
+.container{display:-webkit-flex;display:fiex;-ms-flex-direction:column;flex-direction:column;height:100%;background:url('../img/bg_All.png') no-repeat;background-size:100%;}
+
+.dtgg-logo,
+.dtgg-top-title i.coin,
+.dtgg-top-title .coins,
+.layer-redpacket-logo,
+.layer-redpacket-openbtn,
+.layer-redpacket-closebtn,
+.layer-redpacket-downloadbtn{background:url('../img/bg_sprite.png')no-repeat;background-size:5.35rem;}
+
+
+.dtgg-top-con{position: relative;padding-top:0.5rem;}
+.dtgg-logo{position:absolute;width:3.5rem;height:1.75rem;top:0.25rem;left:0.625rem;background-position: 0 -6.75rem; }
+.dtgg-top-title{position:relative;width:15.85rem;height:13rem;padding:8.9rem 0 0 0;margin:0 auto;background:url('../img/top_bg.png') no-repeat;background-size:100% 100%;z-index:1}
+.dtgg-top-title i.coin{position:absolute;width:1.25rem;height:1.25rem;background-position:0 -1.625rem}
+.dtgg-top-title i.coin.coin1{top:6.25rem;left:1.4rem}
+.dtgg-top-title i.coin.coin2{top:11.25rem;left:0.5rem}
+.dtgg-top-title i.coin.coin3{top:1.5rem;left:12rem}
+
+.dtgg-top-title i.redpacket{position:absolute;background:url('../img/redpacket.png') no-repeat;background-size:100% 100%;}
+.dtgg-top-title i.redpacket.redpacket1{width:2.25rem;height:2.25rem;left:-1.1rem;top:3rem;}
+.dtgg-top-title i.redpacket.redpacket2{width:1rem;height:1rem;left:10.75rem;top:0;}
+.dtgg-top-title i.redpacket.redpacket3{width:1.4rem;height:1.4rem;left:14.75rem;top:-0.4rem;}
+.dtgg-top-title i.redpacket.redpacket4{width:1.25rem;height:1.25rem;left:15.5rem;top:5.625rem;}
+.dtgg-top-title .coins{position:absolute;width:3.675rem;height:1.875rem;left:11.5rem;bottom:0.3rem;background-position:0 -8.875rem}
+
+
+.dtgg-top-con .redpackets{position:absolute;width:5rem;height:6.875rem;top:5.75rem;background:url('../img/sider_packet.png') no-repeat;background-size:5rem;z-index:0;-webkit-transition:all 1s;-moz-transition: all 1s;-o-transition:all 1s;transition:all 1s;}
+.dtgg-top-con .left-redpackets{left:3.1rem;background-position:0 0 ;-webkit-transform:rotateZ(58deg);-moz-transform: rotateZ(58deg);-ms-transform:rotateZ(58deg);transform:rotateZ(58deg);}
+.dtgg-top-con .right-redpackets{right:3.1rem;background-position:0 -7.5rem;-webkit-transform:rotateZ(-58deg);-moz-transform: rotateZ(-58deg);-ms-transform:rotateZ(-58deg);transform:rotateZ(-58deg)}
+
+.dtgg-top-desc p{font-size:0.7rem;color:#fff;text-align:center;}
+.dtgg-top-desc div{width:9.25rem;height:1.25rem;line-height:1.25rem;font-size:0.85rem;color:#ffff00;margin:0.25rem auto 0 auto;text-align:center;background:#e33201;border-radius:0.625rem;}
+
+.dtgg-banner-con{width:17.5rem;height:6.375rem;margin:-4.58rem auto 0 auto;padding:4.55rem 0 0 0;background:url('../img/banner_bg.png') no-repeat;background-size:100% 100%;}
+.dtgg-banner-con ul{position:relative;width:17.125rem;height:1.6rem;overflow:hidden;}
+.dtgg-banner-con ul li{position:absolute;width:100%;height:100%;top:100%;line-height:1.6rem;font-size:0.8rem;color:#ca2c00;text-align:center;}
+.dtgg-banner-con ul li.active{-webkit-animation: banner-item-show 0.5s ease-in-out forwards;-moz-animation: banner-item-show 0.5s ease-in-out forwards;-o-animation: banner-item-show 0.5s ease-in-out forwards;animation: banner-item-show 0.5s ease-in-out forwards;}
+.dtgg-banner-con ul li.inactive{-webkit-animation: banner-item-hide 0.5s ease-in-out forwards;-moz-animation: banner-item-hide 0.5s ease-in-out forwards;-o-animation: banner-item-hide 0.5s ease-in-out forwards;animation: banner-item-hide 0.5s ease-in-out forwards;}
+
+.dtgg-bottom-con{padding:0.8rem 0 0 0;background:#ff571f;border-top-left-radius:0.3rem;border-top-right-radius:0.3rem;-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;flex: 1;}
+.dtgg-form-title{margin-bottom:0.8rem;font-size:0.85rem;color:#fefe00;text-align:center;}
+.dtgg-form-title span{font-size:1.075rem}
+.dtgg-form>div{width:15rem;margin:0 auto;position:relative;margin-bottom:0.5rem;font-size:0}
+.dtgg-form>div input[type="text"],.dtgg-form>div input[type="password"]{width:15rem;height:2.25rem;color:#7d7d7d;font-size:0.7rem;padding-left:2rem;border-radius:0.3rem}
+.dtgg-form>div input.checkcode{width:9rem;margin-right:0.5rem;}
+.dtgg-form>div a.get-checkcode{display:inline-block;width:5.5rem;height:2.25rem;font-size:0.7rem;color:#7d7d7d;background:#fff;text-align:center;text-decoration:none;;line-height: 2.25rem;border-radius:0.3rem}
+.dtgg-form>div i{position:absolute;width:1.4rem;height:1.4rem;top:0.5rem;left:0.25rem;background:url('../img/formIcon.png') no-repeat;background-size:1.4rem;}
+
+.dtgg-form>div i.icon-tel{background-position:0 0 }
+.dtgg-form>div i.icon-checkcode{background-position:0 -3.55rem}
+.dtgg-form>div i.icon-password{background-position:0 -1.8rem}
+.dtgg-form>div i.icon-kk91{background-position:0rem -5.35rem}
+
+.dtgg-form>div input[type="button"]{width:15rem;height:2.25rem;font-size:0.9rem;color:#e84522;border-radius:0.3rem;background:-webkit-linear-gradient(to bottom,#ffff00,#fec726);background:-moz-linear-gradient(to bottom,#ffff00,#fec726);background:linear-gradient(to bottom,#ffff00,#fec726);}
+
+.layui-m-layer-layer-redpacket-con{background-color:transparent!important; }
+.layer-redpacket{position:relative;width:15.85rem;height:16.5rem;padding:2rem 0 0 0;background:url('../img/closered.png') no-repeat;background-size:100% 100%; }
+.layer-redpacket.open{background:url('../img/openred.png') no-repeat;background-size:100% 100%;}
+.layer-redpacket-logo{width:2.8rem;height:1.375rem;background-position:0 -5rem;margin:0 auto;  }
+.layer-redpacket-openbtn{position: absolute; width:5.35rem;height:5.35rem;left:5.5rem;top:4rem;background-position:0 -13.75rem;}
+.layer-redpacket-desc{position:absolute;bottom:5rem;width:100%;}
+.layer-redpacket-desc p{font-size:0.7rem;color:#ffff00;text-align:center}
+.layer-redpacket-desc p:first-child{color:#fff;margin-bottom:0.5rem;}
+.layer-redpacket-downloadbtn{position:absolute;left:5.425rem;bottom:2rem;width:5rem;height:1.375rem;font-size:0.75rem;color:#ff3200!important;background-position:0 -3.25rem;text-align:center;line-height:1.375rem;  }
+.layer-redpacket-money{font-size:1.5rem;color:#ffff00;text-align:center;margin-top:2.5rem}
+.layer-redpacket-money p:last-child{font-size:0.6rem;color:#fff;margin-top:0.5rem;}
+.layer-redpacket.open .layer-redpacket-desc{font-size:0.9rem;}
+.layer-redpacket-desc p,.layer-redpacket-desc p:first-child{color:#fff}
+.layer-redpacket-desc p span{color:#ffff00}
+.layer-redpacket-closebtn{position: absolute;width: 1.25rem;height:1.25rem;bottom:-1rem;left:7.3rem;background-position:0 0;}
+
+.layer-redpacket-openbtn.animation-rotate{-webkit-animation: animation-rotate 0.5s ease-in-out infinite;-moz-animation: animation-rotate 0.5s ease-in-out infinite;-o-animation: animation-rotate 0.5s ease-in-out infinite;animation: animation-rotate 0.5s ease-in-out infinite;}
+
+
+@-webkit-keyframes banner-item-show{
+    from {top:100%}
+    to{top:0}
+}
+@-moz-keyframes banner-item-show{
+    from {top:100%}
+    to{top:0}
+}
+@-o-keyframes banner-item-show{
+    from {top:100%}
+    to{top:0}
+}
+@keyframes banner-item-show{
+    from {top:100%}
+    to{top:0}
+}
+
+@-webkit-keyframes banner-item-hide{
+    from {top:0}
+    to{top:-100%}
+}
+@-moz-keyframes banner-item-hide{
+    from {top:0}
+    to{top:-100%}
+}
+@-o-keyframes banner-item-hide{
+    from {top:0}
+    to{top:-100%}
+}
+@keyframes banner-item-hide{
+    from {top:0}
+    to{top:-100%}
+}
+
+
+
+@-webkit-keyframes animation-rotate{
+    from {transform:rotateY(0)}
+    to{transform:rotateY(360deg)}
+}
+@-moz-keyframes animation-rotate{
+    from {transform:rotateZ(0)}
+    to{transform:rotateY(360deg)}
+}
+@-o-keyframes animation-rotate{
+    from {transform:rotateY(0)}
+    to{transform:rotateY(360deg)}
+}
+@keyframes animation-rotate{
+    from {transform:rotateY(0)}
+    to{transform:rotateY(360deg)}
+}

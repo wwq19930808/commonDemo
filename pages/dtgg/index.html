@@ -1,0 +1,148 @@
+<!Doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script>
+        (function () {
+            setDocfontSize();
+            if (window.attchEvent) {
+                window.attchEvent('resize', function () {
+                    setDocfontSize();
+                })
+            } else {
+                window.addEventListener('resize', function () {
+                    setDocfontSize();
+                });
+            }
+            function setDocfontSize(){
+                var doc = document.documentElement;
+                doc.style.fontSize = doc.offsetWidth / 18 + 'px';
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dtgg-top-con">
+            <div class="dtgg-logo"></div>
+            <div class="dtgg-top-title">
+                <div class="dtgg-top-desc">
+                    <p>——已有xxx人成功领取红包——</P>
+                    <div>
+                        总额：x.xxxxxx元
+                    </div>
+                </div>
+
+                <i class="coin coin1"></i>
+                <i class="coin coin2"></i>
+                <i class="coin coin3"></i>
+                <i class="redpacket redpacket1"></i>
+                <i class="redpacket redpacket2"></i>
+                <i class="redpacket redpacket3"></i>
+                <i class="redpacket redpacket4"></i>
+                <div class="coins"></div>
+            </div>
+            <div class="left-redpackets redpackets"></div>
+            <div class="right-redpackets redpackets"></div>
+            <div class="dtgg-banner-con"></div>
+        </div>
+        <div class="dtgg-bottom-con">
+            <div class="dtgg-form-title">————注册立领
+                <span>999元</span>红包————</div>
+            <div class="dtgg-form">
+                <div>
+                    <input type="text" id="telnum" placeholder="请输入手机号" />
+                    <i class="icon-tel"></i>
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码" class="checkcode" />
+                    <a href="javascript:void(0)" class="get-checkcode">获取验证码</a>
+                    <i class="icon-checkcode"></i>
+                </div>
+                <div>
+                    <input type="password" placeholder="请输入密码" />
+                    <i class="icon-password"></i>
+                </div>
+                <div>
+                    <input type="text" placeholder="KK91" />
+                    <i class="icon-kk91"></i>
+                </div>
+                <div>
+                    <input type="button" value="注册领红包" id="regBtn" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/jquery-1.8.js"></script>
+    <script src="./js/plugins/layer-v3.1.1/layer-v3.1.1/layer/mobile/layer.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+
+        $(function () {
+
+            // 轮播
+            $('.dtgg-banner-con').banner({
+                data: ['m150xxxx0001刚刚领取了xxx元天天红包', 'm150xxxx0002刚刚领取了xxx元天天红包', 'm150xxxx0003刚刚领取了xxx元天天红包']
+            });
+
+            // 初始化后 给轮播添加数据源。
+            $('.dtgg-banner-con').trigger('addData', [{ data: ['m150xxxx0004刚刚领取了xxx元天天红包', 'm150xxxx0005刚刚领取了xxx元天天红包', 'm150xxxx0006刚刚领取了xxx元天天红包'] }]);
+
+            $('.get-checkcode').on('click', function () {
+                if (!checkTelNum($('#telnum').val())) {
+                    layer.open({
+                        type: 0,
+                        content: '请输入正确的手机号',
+                        skin: 'dtgg',
+                        btn: '确定'
+                    })
+                } else {
+                    layer.open({
+                        type: 0,
+                        content: '验证码已发送',
+                        skin: 'dtgg',
+                        btn: '确定'
+                    })
+                }
+
+
+            })
+
+            $('#regBtn').on('click', function () {
+                openDownloadLayer({
+                    success: function () { console.log('show success') },
+                    end: function () { console.log('hide success') },
+                    downloadClick: function () { console.log('download') }
+                });
+
+
+                //    var index= openRedPacketLayer({
+                //         success:function(){console.log('show success')},
+                //         end:function(){console.log('hide success')},
+                //         openBtnClick:function(){
+                //             setTimeout(function(){
+                //                 layer.close(index);
+                //                 openRedPacketContentLayer({
+                //                     money:66.66,
+                //                     success:function(){console.log('show success')},
+                //                     end:function(){console.log('hide success')},
+                //                     joinBtnClick:function(){console.log('立即参与')}
+                //                 });
+                //             },1000)
+                //         }
+                //     })
+            });
+
+        })
+    </script>
+</body>
+
+</html>
